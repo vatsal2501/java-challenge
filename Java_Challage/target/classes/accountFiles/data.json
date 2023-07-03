@@ -1,0 +1,11 @@
+{
+	"name":"ABC",
+	"details": {
+		"gender":"Male",
+		"dob": "20/01/2001",
+		"nativePlace":"nyc"
+	},
+	"accountType": "buyer",
+	"businessRequirements": ["IT", "SEO"],
+	"contractType":"fulltime"
+}
