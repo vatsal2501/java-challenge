@@ -2,23 +2,34 @@ package com.project.dto;
 
 import java.io.Serializable;
 
-import com.project.model.PersonDetail;
+import com.project.enums.ContractTypeEnum;
+import com.project.validation.ValueOfEnum;
+import com.sun.istack.NotNull;
 
-public class AccountDTO implements Serializable{
+public class AccountDTO implements Serializable {
 
 	private int id;
 	
 	private String name;
-	
+
 	private PersonDetailDTO personDetails;
 	
 	private String accountType;
-	
+
 	private String[] businessRequirements;
-	
+
+//	@ValueOfEnum(enumClass = ContractTypeEnum.class)
 	private String contractType;
+
+	private boolean status = true;
 	
-	private boolean status=true;
+	public String getContractType() {
+		return contractType;
+	}
+
+	public void setContractType(String contractType) {
+		this.contractType = contractType;
+	}
 
 	public int getId() {
 		return id;
@@ -60,14 +71,6 @@ public class AccountDTO implements Serializable{
 		this.businessRequirements = businessRequirements;
 	}
 
-	public String getContractType() {
-		return contractType;
-	}
-
-	public void setContractType(String contractType) {
-		this.contractType = contractType;
-	}
-
 	public boolean getStatus() {
 		return status;
 	}
@@ -75,5 +78,5 @@ public class AccountDTO implements Serializable{
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	
+
 }

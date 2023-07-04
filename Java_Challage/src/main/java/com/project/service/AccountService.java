@@ -13,7 +13,7 @@ public interface AccountService {
 	
 	public List<Account> getAllAccount();
 	
-	public AccountDTO findById(int id);
+	public AccountDTO findById(Integer accountId);
 	
 	public void deleteAccount(Integer accountId);
 }

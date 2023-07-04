@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.project.exception.InvalidContractType;
+import com.project.validation.ValidateContractType;
 
 @Entity
 @Table(name = "account_table")
@@ -93,22 +93,9 @@ public class Account {
 	public String getContractType() {
 		return contractType;
 	}
-
-	public void setContractType(String contractType) throws InvalidContractType {
-
-		switch (contractType) {
-
-		case "fulltime":
-			this.contractType = contractType;
-			break;
-
-		case "parttime":
-			this.contractType = contractType;
-			break;
-
-		default:
-			throw new InvalidContractType();
-		}
+	
+	public void setContractType(String contractType) {
+		this.contractType = contractType; 
 	}
 
 }
